@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小王驿站 - 落地页</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 导航栏 */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #37a0d8;
+      color: #fff;
+      padding: 14px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 15px;
+      transition: opacity 0.2s;
+    }
+
+    nav a:hover {
+      opacity: 0.85;
+    }
+
+    .btn {
+      background-color: #fff;
+      color: #37a0d8;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* 主要内容 */
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 英雄区域 */
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      color: #222;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 28px;
+    }
+
+    .btn-main {
+      background-color: #37a0d8;
+      color: #fff;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-main:hover {
+      background-color: #2d8bc0;
+    }
+
+    /* 三栏特色区 */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding: 20px 0 60px;
+    }
+
+    .feature {
+      background: #fff;
+      border-radius: 10px;
+      padding: 28px 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature .icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    .feature h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #222;
+    }
+
+    .feature p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* 页脚 */
+    footer {
+      text-align: center;
+      background-color: #37a0d8;
+      color: #fff;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    /* 响应式 */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 14px;
+        padding: 16px;
+      }
+
+      nav {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 26px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">小王驿站</div>
+    <nav>
+      <a href="#">首页</a>
+      <a href="#">关于</a>
+      <a href="#">服务</a>
+      <a href="#">联系</a>
+    </nav>
+    <button class="btn">立即体验</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>欢迎来到小王驿站</h1>
+      <p>-- 祝你开心每一天！</p>
+      <button class="btn-main">加入我们</button>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <div class="icon">🚀</div>
+        <h2>高效便捷</h2>
+        <p>这是特色1的简短描述内容，可以放一些介绍文字，说明产品的优势。</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🛡️</div>
+        <h2>安全可靠</h2>
+        <p>这是特色2的简短描述内容，可以放一些介绍文字，说明产品的优势。</p>
+      </div>
+      <div class="feature">
+        <div class="icon">💡</div>
+        <h2>持续创新</h2>
+        <p>这是特色3的简短描述内容，可以放一些介绍文字，说明产品的优势。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 小王驿站. 版权所有.</p>
+  </footer>
+</body>
+</html>
